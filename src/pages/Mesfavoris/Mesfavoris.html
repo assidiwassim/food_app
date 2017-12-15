@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Mes favoris</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+
+    <div *ngFor="let imeges of imegesList ">
+
+        <ion-card>
+            <button (tap)="Remove(imeges)" class="position_trash">
+                <ion-icon class="trashStyle" ios="ios-trash" md="md-trash" ></ion-icon> 
+            </button>
+            <img src="{{imeges.object.URL}} " />
+            <ion-card-content>
+                <ion-card-title>
+                    {{imeges.object.ProdectName}}
+                </ion-card-title>
+                <p>
+                    {{imeges.object.ProdectDescription}}
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+    </div>

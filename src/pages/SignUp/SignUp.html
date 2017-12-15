@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Sign Up </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+
+    <ion-content>
+            <ion-content>
+        
+                <div class="cover">
+                    <div class="effects">
+                        <div class="content">
+                            <div class="content-title">
+                                <h2>Sign up </h2>
+                            </div>
+                            <div class="content-form">
+                                <input type="text" placeholder="Username" #Username />
+                                <input type="text" placeholder="Email" #Email/>
+                                <input type="password" placeholder="Password"  #Password/>
+                                <input type="password" placeholder="Confirm Password" #Password2 />
+                            </div>
+                            <div class="content-button">
+                                <button class="btn" (tap)="Signup(Username.value,Password.value,Password2.value,Email.value)">
+                                                  SignUp
+                             </button>
+                            </div>
+        
+        
+                        </div>
+                    </div>
+                </div>
+        
+        
+            </ion-content>
+        
+        
+        </ion-content>
+
+

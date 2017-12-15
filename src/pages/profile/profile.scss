@@ -1,0 +1,27 @@
+page-profile {
+    #card {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+    }
+    #title {
+        color: grey;
+        font-size: 18px;
+    }
+    #btn {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title> Commentaires</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-textarea #myInput rows="2" maxLength="500"></ion-textarea>
+    <button ion-button (tap)="addComment()">commenter </button>
+    <div *ngFor="let s of comment ">
+        <div *ngIf="s.com!=undefined">
+            <ion-card>
+                <ion-card-header>
+                    <b> {{s.user}}</b>
+                </ion-card-header>
+                <ion-card-content>
+                    {{s.com}}
+                </ion-card-content>
+            </ion-card>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Detail Recette</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+
+    <div *ngFor="let a of imegesList">
+
+        <ion-card>
+
+            <ion-item>
+                <h2>{{a.ProdectName}}</h2>
+            </ion-item>
+
+            <img src={{a.URL}} />
+
+            <ion-card-content>
+                <p>{{a.ProdectDescription}}</p>
+            </ion-card-content>
+
+            <ion-row>
+
+                <ion-col>
+                    <button (tap)="Like(a)" ion-button icon-left clear small>
+                                <ion-icon name="thumbs-up"></ion-icon>
+                                <div>{{a.nbLikes}} Likes</div>
+                        </button>
+                </ion-col>
+
+                <ion-col>
+                    <button (tap)="Comment(a)" ion-button icon-left clear small>
+                     <ion-icon name="text">
+                     </ion-icon>
+                       <div>{{a.nbComment}} Comments</div>
+                      </button>
+                </ion-col>
+
+                <ion-col>
+                    <button class="float_left" (tap)="Addfavoris(a)" ion-button icon-left clear small>
+                                <ion-icon name="heart"  ></ion-icon>
+                                <p color="primary"> <a>Favoris</a></p>
+                        </button>
+                </ion-col>
+            </ion-row>
+
+        </ion-card>
+
+
+    </div>
+
+    <ion-list>
+        <ion-item>
+            <h2>How to use </h2>
+
+        </ion-item>
+    </ion-list>
+    <div *ngFor="let s of howtouse ">
+        <ion-list>
+            <ion-item>
+                <h2>{{s}}</h2>
+
+                <button ion-button clear item-end>  <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon></button>
+            </ion-item>
+        </ion-list>
+    </div>
+
+</ion-content>

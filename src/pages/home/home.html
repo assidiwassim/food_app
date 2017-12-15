@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Catégorie</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+
+    <ion-card (tap)="GoRecettesPage('Pizza')">
+        <img src="./assets/imgs/4.jpg" />
+        <div class="card-title">Pizza</div>
+        <div class="card-subtitle">{{(CountPizza)?.length}} List</div>
+    </ion-card>
+
+    <ion-card (tap)="GoRecettesPage('cupcakes')">
+        <img src="./assets/imgs/cupcakes.jpg" />
+        <div class="card-title">Capcakes</div>
+        <div class="card-subtitle"> {{(Countcupcakes)?.length}} List</div>
+    </ion-card>
+
+    <ion-card (tap)="GoRecettesPage('glase')">
+        <img src="./assets/imgs/glase.jpg" />
+        <div class="card-title">Glase</div>
+        <div class="card-subtitle">{{(CountGlase)?.length}}List</div>
+    </ion-card>
+    <ion-card (tap)="GoRecettesPage('food')">
+        <img src="./assets/imgs/food.jpg" />
+        <div class="card-title">Food</div>
+        <div class="card-subtitle">{{(Countfood)?.length}} List</div>
+    </ion-card>
+
+</ion-content>

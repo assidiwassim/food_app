@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Mes recettes</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+
+    <div *ngFor="let imeges of imegesList ">
+
+        <ion-card>
+
+
+            <button (tap)="Remove(imeges)" class="position_trash">
+            <ion-icon class="trashStyle" ios="ios-trash" md="md-trash" ></ion-icon> 
+        </button>
+
+            <img src="{{imeges.URL}} " />
+            <ion-card-content>
+                <ion-card-title>
+
+                    {{imeges.ProdectName}}
+                </ion-card-title>
+                <p>
+                    {{imeges.ProdectDescription}}
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+    </div>
+
+
+
+</ion-content>

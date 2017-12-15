@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Ajouter Recette</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+        <h5 ion-text color="dark"text-center>Selectioner l'image de la Recette</h5> 
+        <ion-item>
+ 
+    
+          <ion-icon ios="ios-camera" md="md-camera" (click)="load()"></ion-icon>
+        </ion-item>
+     
+   
+        <h5 ion-text color="dark"text-center>Details de la Recette</h5>
+        <ion-item>
+               
+             <ion-input type="text" placeholder="Title" #ProdectName></ion-input>
+            
+        </ion-item>
+        <ion-list>
+        <ion-item>
+            <ion-textarea placeholder="Discription" #ProdectDescription></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+            <h5 ion-text color="dark"text-center>Ingerdient de la Recette</h5>
+        <ion-item>
+            <ion-input type="text"  float-left placeholder="Name" #HowToUseProdect></ion-input>
+
+        </ion-item>
+        <button ion-button float-right (tap)="AddList()">Ajouter</button>
+        <div>
+            <ul *ngFor="let a of listRecettes">
+                <li>
+                    {{a}}
+                </li>
+            </ul>
+        </div>
+       
+
+        <ion-item>
+
+            <button ion-button full (tap)="saveProfile_click()">Envoyer La Recette</button>
+        </ion-item>
+
+    </ion-list>
+
+
+</ion-content>

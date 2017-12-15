@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Recettes</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+
+    <div *ngFor="let imeges of imegesList ">
+
+        <ion-card (tap)="GoDetailPage(imeges)">
+            <img src="{{imeges.URL}} " />
+            <ion-card-content>
+                <ion-card-title>
+                    {{imeges.ProdectName}}
+                </ion-card-title>
+                <p>
+                    {{imeges.ProdectDescription}}
+                </p>
+            </ion-card-content>
+        </ion-card>
+
+    </div>
+
+    <ion-fab (tap)="add()" top right edge>
+        <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+
+</ion-content>
